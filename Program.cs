@@ -30,3 +30,21 @@ Console.WriteLine($"New version of {random} is {newNumber}");*/
     }
 }
 main(56);*/
+
+/*Задача 15: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
+6 -> да
+7 -> да
+1 -> нет*/
+/*bool main (int num)
+{
+    if (num<8 && num>5 ) 
+     
+    {
+    return true;
+    }
+    else
+    {
+     return false;   
+    }    
+}
+Console.WriteLine($"  {main(6)}");*/
