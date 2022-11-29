@@ -1,50 +1,11 @@
-﻿/*Задача 10: Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает вторую цифру этого числа.
+/*Задача 21
+Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
+A (3,6,8); B (2,1,-7), -> 15.84
+A (7,-5, 0); B (1,-1,9) -> 11.53*/
 
-456 -> 5
-782 -> 8
-918 -> 1*/
-
- /*int Secondnumbember (int num)
-   {
-    int dec = num/10;
-    int res = dec%10;
-    return res;
-   }
-int random = new Random().Next(100,1000);
-int newNumber = Secondnumbember(random);
-Console.WriteLine($"New version of {random} is {newNumber}");*/
-
-/*Задача 13: Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
-645 -> 5
-78 -> третьей цифры нет
-32679 -> 6*/
-/*void main (int num)
+/*double Getlens (int x1, int y1, int z1, int x2, int y2, int z2)
 {
-    if(num>100 && num<1000)
-    {
-        Console.WriteLine(num%10);
-    }
-    else
-    {
-       Console.WriteLine("Третьей цифры нет"); 
-    }
+ double len= Math.Sqrt((x1-x2)*(x1-x2)+(y1-y2)*(y1-y2)+(z2-z1)*(z2-z1));  
+ return len;
 }
-main(56);*/
-
-/*Задача 15: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
-6 -> да
-7 -> да
-1 -> нет*/
-/*bool main (int num)
-{
-    if (num<8 && num>5 ) 
-     
-    {
-    return true;
-    }
-    else
-    {
-     return false;   
-    }    
-}
-Console.WriteLine($"  {main(6)}");*/
+Console.WriteLine(Getlens(3, 6, 8,  2, 1,-7));*/
