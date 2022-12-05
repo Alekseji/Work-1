@@ -42,4 +42,28 @@ int [] myArray = CreateArray(a,min,max);
 ShowArray(myArray);
 Positivnumbers(myArray);*/
 
+/*Задача 43: Напишите программу, которая найдёт точку пересечения двух прямых, заданных уравнениями y = k1 * x + b1, y = k2 * x + b2; значения b1, k1, b2 и k2 задаются пользователем.
+b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)*/
+
+/*double Intersectionoflines (int b1, int k1,int b2, int k2);
+   double x = k1 * x + b1;
+   double y = k2 * x + b2;
+   for (int x = -0,5; x < 0,5; x++)
+   {
+   for (int y = -0,5; y < 0,5; y++)
+   {
+   if (k1 * x + b1 =-0,5 && k2 * x + b2=-0,5);
+   else Console.WriteLine("Прямые не пересекаются");
+   }
+   Console.WriteLine(Intersectionoflines ($"X = {x}, Y = {y}")); 
+}
+Console.WriteLine("Imput numberb1");
+double numberb1=Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Imput numberk1");
+double numberk1=Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Imput numberb2");
+double numberb2=Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Imput numberk2");
+double numberk2=Convert.ToInt32(Console.ReadLine());*/
+
 
