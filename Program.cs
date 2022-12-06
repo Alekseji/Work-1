@@ -1,69 +1,93 @@
-/*Задача 41: Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввёл пользователь.
-0, 7, 8, -2, -2 -> 2
-1, -7, 567, 89, 223-> 3*/
-   
-/*int [] CreateArray (int size, int minValue, int maxValue)
-{
-    int [] newArray = new int [size];
-    for (int i = 0; i < size; i++)
-    {
-       newArray[i] = new Random().Next(minValue, maxValue+1);
-    }
-    return newArray;
-    
-}   
-void ShowArray(int [] array)
-{
-    Console.Write("Получившийся массив ->");
-    for (int i = 0; i < array.Length; i++)
-    {
-       Console.Write(array[i]+ " "); 
-    }
-    Console.WriteLine();
-  
-}
-void Positivnumbers (int [] array)
-  
-{
-   int count = 0;
-   for (int i = 0; i <array.Length; i++)                
-   {
-    if (array[i]> 0 ) count ++;
-   }
-    Console.WriteLine($"количество положительных чисел {count}");
-}
-Console.WriteLine("введите размер массива");
-int a=Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите минимальное значение элемента");
-int min=Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите максимальное значение элемента");
-int max=Convert.ToInt32(Console.ReadLine());
-int [] myArray = CreateArray(a,min,max);
-ShowArray(myArray);
-Positivnumbers(myArray);*/
+/*Задача 47. Задайте двумерный массив размером m×n, заполненный случайными вещественными числами.
+m = 3, n = 4.
+0,5 7 -2 -0,2
+1 -3,3 8 -9,9
+8 7,8 -7,1 9*/
 
-/*Задача 43: Напишите программу, которая найдёт точку пересечения двух прямых, заданных уравнениями y = k1 * x + b1, y = k2 * x + b2; значения b1, k1, b2 и k2 задаются пользователем.
-b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)*/
-
-/*double Intersectionoflines (int b1, int k1,int b2, int k2);
-   double x = k1 * x + b1;
-   double y = k2 * x + b2;
-   for (int x = -0,5; x < 0,5; x++)
-   {
-   for (int y = -0,5; y < 0,5; y++)
-   {
-   if (k1 * x + b1 =-0,5 && k2 * x + b2=-0,5);
-   else Console.WriteLine("Прямые не пересекаются");
-   }
-   Console.WriteLine(Intersectionoflines ($"X = {x}, Y = {y}")); 
+/*double[,] Create2DRandomArray (double rows, double columns)
+{
+double[,] newArray = new double[rows,columns];
+for (int i = 0; i < rows; i++)
+{
+for (int j = 0; j < columns; j++)
+{
+newArray[i,j] = new  Random().Next(6, 8);
 }
-Console.WriteLine("Imput numberb1");
-double numberb1=Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Imput numberk1");
-double numberk1=Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Imput numberb2");
-double numberb2=Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Imput numberk2");
-double numberk2=Convert.ToInt32(Console.ReadLine());*/
+}
+return newArray;
+}
+
+void Show2DArray (double[,] array)
+{
+for (int i = 0; i < array.GetLength(0); i++)
+{
+for (int j = 0; j < array.GetLength(1); j++)
+{
+Console.Write(array[i,j] + " ");
+}
+Console.WriteLine();
+}
+}
+Console.WriteLine("Введите количество строк: ");
+double rows = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("Введите количество столбцов: ");
+double columns = Convert.ToDouble(Console.ReadLine());
+double[,] myArray = Create2DRandomArray(rows, columns);
+Show2DArray(myArray);*/
+
+/*Задача 50. Напишите программу, которая на вход принимает позиции элемента в двумерном массиве, и возвращает значение этого элемента или же указание, что такого элемента нет.
+Например, задан массив:
+1 4 7 2
+5 9 2 3
+8 4 2 4
+17 -> такого числа в массиве нет*/
+
+/*int[,] Create2DRandomArray (int rows, int columns)
+{
+int[,] newArray = new int[rows,columns];
+for (int i = 0; i < rows; i++)
+{
+for (int j = 0; j < columns; j++)
+{
+newArray[i,j] = new  Random().Next(0, 25);
+}
+}
+return newArray;
+}
+
+void Show2DArray (int[,] array)
+{
+ for (int i = 0; i < array.GetLength(0); i++)
+ {
+ for (int j = 0; j < array.GetLength(1); j++)
+ {
+ Console.Write(array[i,j] + " ");
+ }
+ Console.WriteLine();
+ }
+}
+int[,] Nummber2DArray (int rows, int columns,int a)
+{
+int[,] newArray = new int[rows,columns];
+for (int i = 0; i < rows; i++)
+{
+for (int j = 0; j < columns; j++)
+{
+newArray[i,j] = new  Random().Next(0, 25);
+if( a > 0 &&  a < 25 );
+else Cnsole.WriteLine("Такого числа нет");
+}
+Cnsole.WriteLine("Число в массиве");
+}
+}
+Console.WriteLine("Введите количество строк: ");
+int rows = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите количество столбцов: ");
+int columns = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите число: ");
+int a = Convert.ToInt32(Console.ReadLine());
+int[,] myArray = Create2DRandomArray(rows, columns);
+Show2DArray(myArray);
+Nummber2DArray (myArray);*/
 
 
