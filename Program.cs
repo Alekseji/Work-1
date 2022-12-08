@@ -1,93 +1,65 @@
-/*Задача 47. Задайте двумерный массив размером m×n, заполненный случайными вещественными числами.
-m = 3, n = 4.
-0,5 7 -2 -0,2
-1 -3,3 8 -9,9
-8 7,8 -7,1 9*/
-
-/*double[,] Create2DRandomArray (double rows, double columns)
-{
-double[,] newArray = new double[rows,columns];
-for (int i = 0; i < rows; i++)
-{
-for (int j = 0; j < columns; j++)
-{
-newArray[i,j] = new  Random().Next(6, 8);
-}
-}
-return newArray;
-}
-
-void Show2DArray (double[,] array)
-{
-for (int i = 0; i < array.GetLength(0); i++)
-{
-for (int j = 0; j < array.GetLength(1); j++)
-{
-Console.Write(array[i,j] + " ");
-}
-Console.WriteLine();
-}
-}
-Console.WriteLine("Введите количество строк: ");
-double rows = Convert.ToDouble(Console.ReadLine());
-Console.WriteLine("Введите количество столбцов: ");
-double columns = Convert.ToDouble(Console.ReadLine());
-double[,] myArray = Create2DRandomArray(rows, columns);
-Show2DArray(myArray);*/
-
-/*Задача 50. Напишите программу, которая на вход принимает позиции элемента в двумерном массиве, и возвращает значение этого элемента или же указание, что такого элемента нет.
+/*Задача 54: Задайте двумерный массив. Напишите программу, которая упорядочит по убыванию элементы каждой строки двумерного массива.
 Например, задан массив:
 1 4 7 2
 5 9 2 3
 8 4 2 4
-17 -> такого числа в массиве нет*/
+В итоге получается вот такой массив:
+7 4 2 1
+9 5 3 2
+8 4 4 2*/
+/*int[,] CreateRandom2DArray(int rows, int columns, int minValue, int maxValue)
+{
+ int[,] newArray = new int[rows, columns];
 
-/*int[,] Create2DRandomArray (int rows, int columns)
-{
-int[,] newArray = new int[rows,columns];
-for (int i = 0; i < rows; i++)
-{
-for (int j = 0; j < columns; j++)
-{
-newArray[i,j] = new  Random().Next(0, 25);
-}
-}
+ for (int i = 0; i < rows; i++)
+ {
+   for(int j = 0; j < columns; j++)
+  {
+   newArray[i,j] = new Random().Next(minValue,maxValue + 1);
+  }
+ }
 return newArray;
 }
 
-void Show2DArray (int[,] array)
+void Show2DArray(int[,] array)
 {
- for (int i = 0; i < array.GetLength(0); i++)
+ for(int i = 0;i < array.GetLength(0) ;i++ )
  {
- for (int j = 0; j < array.GetLength(1); j++)
- {
- Console.Write(array[i,j] + " ");
+  for(int j = 0; j < array.GetLength(1); j++)
+  {
+   Console.Write(array[i,j] + " ");
+  }
+  Console.WriteLine();
  }
- Console.WriteLine();
- }
 }
-int[,] Nummber2DArray (int rows, int columns,int a)
+void Findmaxelement (int[,] array, int minValue, int maxValue)
 {
-int[,] newArray = new int[rows,columns];
-for (int i = 0; i < rows; i++)
-{
-for (int j = 0; j < columns; j++)
-{
-newArray[i,j] = new  Random().Next(0, 25);
-if( a > 0 &&  a < 25 );
-else Cnsole.WriteLine("Такого числа нет");
+    for(int i = maxValue; i < array.GetLength(0);i++ )
+    {
+        for(int j = maxValue; j < array.GetLength(1); j++)
+        array [i,j] = array [maxValue, minValue];
+        
+    }
+     {
+        Console.Write(array[minValue,maxValue] + " ");
+     }
+     
+     Console.WriteLine();
 }
-Cnsole.WriteLine("Число в массиве");
-}
-}
-Console.WriteLine("Введите количество строк: ");
+Console.Write("Введите количество строк ");
 int rows = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите количество столбцов: ");
+Console.Write("Введите количество столбцов ");
 int columns = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите число: ");
-int a = Convert.ToInt32(Console.ReadLine());
-int[,] myArray = Create2DRandomArray(rows, columns);
+Console.Write("Введите минимальное значение ");
+int min = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите максимальное значение ");
+int max = Convert.ToInt32(Console.ReadLine());
+int[,] myArray = CreateRandom2DArray(rows,columns,min,max);
 Show2DArray(myArray);
-Nummber2DArray (myArray);*/
+Findmaxelement(myArray,min,max);
+Console.WriteLine();
+Show2DArray(myArray);*/
+
+
 
 
