@@ -1,65 +1,32 @@
-/*Задача 54: Задайте двумерный массив. Напишите программу, которая упорядочит по убыванию элементы каждой строки двумерного массива.
-Например, задан массив:
-1 4 7 2
-5 9 2 3
-8 4 2 4
-В итоге получается вот такой массив:
-7 4 2 1
-9 5 3 2
-8 4 4 2*/
-/*int[,] CreateRandom2DArray(int rows, int columns, int minValue, int maxValue)
+/*Задача 64: Задайте значение N. Напишите программу, которая выведет все натуральные числа в промежутке от N до 1. Выполнить с помощью рекурсии.
+N = 5 -> "5, 4, 3, 2, 1"
+N = 8 -> "8, 7, 6, 5, 4, 3, 2, 1"*/
+/*void ShowNumber(int n)
 {
- int[,] newArray = new int[rows, columns];
-
- for (int i = 0; i < rows; i++)
- {
-   for(int j = 0; j < columns; j++)
-  {
-   newArray[i,j] = new Random().Next(minValue,maxValue + 1);
-  }
- }
-return newArray;
-}
-
-void Show2DArray(int[,] array)
-{
- for(int i = 0;i < array.GetLength(0) ;i++ )
- {
-  for(int j = 0; j < array.GetLength(1); j++)
-  {
-   Console.Write(array[i,j] + " ");
-  }
-  Console.WriteLine();
- }
-}
-void Findmaxelement (int[,] array, int minValue, int maxValue)
-{
-    for(int i = maxValue; i < array.GetLength(0);i++ )
+    if(n>=1)
     {
-        for(int j = maxValue; j < array.GetLength(1); j++)
-        array [i,j] = array [maxValue, minValue];
-        
+        Console.Write(n+" ");
+        ShowNumber(n-1);
     }
-     {
-        Console.Write(array[minValue,maxValue] + " ");
-     }
-     
-     Console.WriteLine();
 }
-Console.Write("Введите количество строк ");
-int rows = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите количество столбцов ");
-int columns = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите минимальное значение ");
-int min = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите максимальное значение ");
-int max = Convert.ToInt32(Console.ReadLine());
-int[,] myArray = CreateRandom2DArray(rows,columns,min,max);
-Show2DArray(myArray);
-Findmaxelement(myArray,min,max);
-Console.WriteLine();
-Show2DArray(myArray);*/
+ShowNumber(8);*/
+/*Задача 66: Задайте значения M и N. Напишите программу, которая найдёт сумму натуральных элементов в промежутке от M до N.
+M = 1; N = 15 -> 120
+M = 4; N = 8. -> 30*/
 
+ /*int SumNumbers(int M, int N)
+{
+    if (M == 0) return (N * (N + 1)) / 2;            
+    else if (N == 0) return (M * (M + 1)) / 2;       
+    else if (M == N) return M;                       
+    else if (M < N) return N + SumNumbers(M, N - 1); 
+    else return N + SumNumbers(M, N + 1);            
+}
+Console.Write("Введите значение M ");
+int M = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите значение N ");
+int N = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine($"Сумма чисел {SumNumbers(M, N)}");*/
 
 
 
