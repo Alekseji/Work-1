@@ -1,32 +1,30 @@
-/*Задача 64: Задайте значение N. Напишите программу, которая выведет все натуральные числа в промежутке от N до 1. Выполнить с помощью рекурсии.
-N = 5 -> "5, 4, 3, 2, 1"
-N = 8 -> "8, 7, 6, 5, 4, 3, 2, 1"*/
-/*void ShowNumber(int n)
+/*Задача: Написать программу, которая из имеющегося массива строк 
+формирует новый массив из строк, длина которых меньше, 
+либо равна 3 символам. Первоначальный массив можно ввести с клавиатуры, 
+либо задать на старте выполнения алгоритма. При решении не рекомендуется 
+пользоваться коллекциями, лучше обойтись исключительно массивами.*/
+string[] array1 = new string[5] {"123", "23", "hello", "world", "res"};
+string[] array2 = new string[array1.Length];
+void SecondArrayWithIF(string[] array1, string[] array2)
 {
-    if(n>=1)
+    int count = 0;
+    for (int i = 0; i < array1.Length; i++)
     {
-        Console.Write(n+" ");
-        ShowNumber(n-1);
+    if(array1[i].Length <= 3)
+        {
+        array2[count] = array1[i];
+        count++;
+        }
     }
 }
-ShowNumber(8);*/
-/*Задача 66: Задайте значения M и N. Напишите программу, которая найдёт сумму натуральных элементов в промежутке от M до N.
-M = 1; N = 15 -> 120
-M = 4; N = 8. -> 30*/
-
- /*int SumNumbers(int M, int N)
+void PrintArray(string[] array)
 {
-    if (M == 0) return (N * (N + 1)) / 2;            
-    else if (N == 0) return (M * (M + 1)) / 2;       
-    else if (M == N) return M;                       
-    else if (M < N) return N + SumNumbers(M, N - 1); 
-    else return N + SumNumbers(M, N + 1);            
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write($"{array[i]} ");
+    }
+    Console.WriteLine();
 }
-Console.Write("Введите значение M ");
-int M = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите значение N ");
-int N = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine($"Сумма чисел {SumNumbers(M, N)}");*/
-
-
+SecondArrayWithIF(array1, array2);
+PrintArray(array2);
 
